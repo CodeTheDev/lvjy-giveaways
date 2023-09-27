@@ -4,7 +4,7 @@ module.exports = {
 	description: 'Reroll giveaway winners.',
 	options: [
 		{
-			name: 'giveaway',
+			name: 'id',
 			description: 'The message ID of the giveaway.',
 			type: Discord.ApplicationCommandOptionType.String,
 			required: true,

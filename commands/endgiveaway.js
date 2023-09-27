@@ -4,7 +4,7 @@ module.exports = {
 	description: 'End a giveaway in-progress.',
 	options: [
 		{
-			name: 'giveaway',
+			name: 'id',
 			description: 'The message ID of the giveaway.',
 			type: Discord.ApplicationCommandOptionType.String,
 			required: true,
