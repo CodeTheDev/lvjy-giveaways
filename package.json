@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A giveaway bot written in JavaScript, created for the Lovejoy Discord server.",
   "main": "bot.js",
+  "scripts": {
+    "lint": "eslint './*.js' './commands/*.js' './utils/*.js'",
+    "lint-fix": "eslint --fix './*.js' './commands/*.js' './utils/*.js'"
+  },
   "author": "CodeTheDev",
   "license": "ISC",
   "dependencies": {
