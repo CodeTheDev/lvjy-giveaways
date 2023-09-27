@@ -1,3 +1,18 @@
+// Modify Logging Function
+(function() {
+	const oldLog = console.log;
+	console.log = function() {
+		const date = new Date();
+		const d = ('0' + (date.getDate().toString())).slice(-2),
+			m = ('0' + ((date.getMonth() + 1).toString())).slice(-2),
+			y = ('0' + (date.getFullYear().toString())).slice(-4),
+			t = date.toUTCString().slice(-13, -4);
+		Array.prototype.unshift.call(arguments, '[' + d + '/' + m + '/' + y + t + ']');
+		oldLog.apply(this, arguments);
+	};
+})();
+
+// Discord Client
 const Discord = require('discord.js');
 const client = new Discord.Client({
 	intents: [
