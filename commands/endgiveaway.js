@@ -18,7 +18,7 @@ module.exports = {
 			});
 		}
 
-		const giveawayId = interaction.options.getString('giveaway');
+		const giveawayId = interaction.options.getString('id');
 		const giveaway = client.giveawaysManager.giveaways.find((guild) => guild.messageId === giveawayId && guild.guildId === interaction.guild.id);
 
 		if (!giveaway) {
